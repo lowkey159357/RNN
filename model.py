@@ -109,7 +109,8 @@ class Model():
         # 计算l2正则loss 
         tv = tf.trainable_variables()#得到所有可以训练的参数，即所有trainable=True 的tf.Variable/tf.get_variable
         regularization_cost = self.lamda* tf.reduce_sum([ tf.nn.l2_loss(v) for v in tv ]) #0.001是lambda超参数
-
+        tf.summary.scalar('regularization_cost', regularization_cost)
+        
         # 总loss
         self.loss = logits_loss + var_loss + regularization_cost 
         tf.summary.scalar('total_loss', self.loss)
