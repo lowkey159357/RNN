@@ -111,7 +111,7 @@ class Model():
         regularization_cost = self.lamda* tf.reduce_sum([ tf.nn.l2_loss(v) for v in tv ]) #0.001是lambda超参数
 
         # 总loss
-        self.loss = logits_loss + var_loss
+        self.loss = logits_loss + var_loss + regularization_cost 
         tf.summary.scalar('total_loss', self.loss)
 
         # gradient clip
