@@ -33,8 +33,8 @@ def vocabulary_to_inter(vocabulary):
     vocabulary_size = 5000
     data, count, dictionary, reverse_dictionary = build_dataset(vocabulary, vocabulary_size)
     # 保存成json格式
-    json.dump(dictionary,open('dictionary.json','w',encoding='utf-8'))              
-    json.dump(reverse_dictionary,open('reverse_dictionary.json','w',encoding='utf-8'))
+    #json.dump(dictionary,open('dictionary.json','w',encoding='utf-8'))              
+    #json.dump(reverse_dictionary,open('reverse_dictionary.json','w',encoding='utf-8'))
     return np.array(data)
 
 def get_train_data(vocabulary_int, batch_size, num_steps):
