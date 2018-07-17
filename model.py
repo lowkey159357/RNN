@@ -6,7 +6,7 @@ import tensorflow as tf
 
 
 class Model():
-    def __init__(self, learning_rate=0.001,lamda=5e-4,batch_size=16, num_steps=32, num_words=5000, dim_embedding=128, rnn_layers=3):
+    def __init__(self, learning_rate=0.001,lamda=1e-7,batch_size=16, num_steps=32, num_words=5000, dim_embedding=128, rnn_layers=3):
         r"""初始化函数
 
         Parameters
